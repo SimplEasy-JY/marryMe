@@ -40,8 +40,15 @@
                                 <color key="textColor" red="1" green="0.67795634640000002" blue="0.90372063810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______________________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-aR-OuJ">
+                                <rect key="frame" x="118" y="177" width="706" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95336787564766845" green="0.64907488583247286" blue="0.86944306927841264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-0J-gLa">
-                                <rect key="frame" x="118" y="228" width="86" height="46"/>
+                                <rect key="frame" x="118" y="214" width="86" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="好的！">
@@ -52,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARL-pu-eVJ">
-                                <rect key="frame" x="293" y="228" width="86" height="46"/>
+                                <rect key="frame" x="293" y="214" width="86" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="不好！">
@@ -69,15 +76,15 @@
                                 <color key="textColor" red="1" green="0.67795634640000002" blue="0.90372063810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-CW-vH1">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0244.png" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-mj-7oQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0244.png" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-mj-7oQ">
                                 <rect key="frame" x="565" y="94" width="166" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="1oX-AL-ALm"/>
                                     <constraint firstAttribute="height" constant="166" id="Qb8-d8-Klg"/>
                                 </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-CW-vH1">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95298003672089449" green="0.92347015290593304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,6 +105,7 @@
                         <outlet property="headicon" destination="jEC-qB-FXq" id="ptT-s6-nLg"/>
                         <outlet property="like_image" destination="TbA-mj-7oQ" id="uvJ-zS-4uO"/>
                         <outlet property="promise_label" destination="mdS-5J-u7p" id="TrW-1u-g7F"/>
+                        <outlet property="separate_line" destination="IyG-aR-OuJ" id="IE1-Q6-1l9"/>
                         <outlet property="user_control_Agent" destination="wIv-CW-vH1" id="1iO-Pc-136"/>
                         <outlet property="welcome_image_main" destination="goP-u7-Q3O" id="8Fd-w7-L5s"/>
                         <outlet property="welcome_tilt" destination="h8t-gG-cQx" id="aVN-We-x5C"/>

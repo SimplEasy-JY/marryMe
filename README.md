@@ -7,4 +7,3 @@ Lakr Design
 Kari Sipe Studio Present
 
 
-

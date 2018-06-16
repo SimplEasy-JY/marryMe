@@ -11,7 +11,9 @@ import UIKit
 var random_section:Int = 0
 var string_lenth = 0
 var last_section_is = 0
+var dislike_pressed = 0
 let this_is_two_line = false
+let button_move_offset:CGFloat = 4
 let answer_string_format = ["""
 房子写你名字
 ""","""
@@ -21,9 +23,37 @@ let answer_string_format = ["""
 ""","""
 我妈游泳国家级
 ""","""
-"""]
+最近手头有点紧因为想牵你
+""","""
+我们不适合谈恋爱适合结婚
+""","""
+讨人喜欢百看不厌
+""","""
+你特别有气质
+""","""
+你从来没有化过妆
+""","""
+包包从天而降不会少
+""","""
+我不打游戏
+""","""
+我不吵架
+""","""
+我一直喜欢你
+""","""
+你不会变老
+""","""
+我知道我有点土但是这是爱
+""","""
+你像是我的人
+""","""
+确认过眼神
+""","""
+你声音很好听
+""","""
+喜欢你不需要理由
+""",""]
 
-var already_have_a_label = false
 
 class initViewController: UIViewController {
   
@@ -36,6 +66,7 @@ class initViewController: UIViewController {
     @IBOutlet weak var headicon: UIImageView!
     @IBOutlet weak var like_image: UIImageView!
     @IBOutlet weak var user_control_Agent: UIImageView!
+    @IBOutlet weak var separate_line: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +87,28 @@ class initViewController: UIViewController {
     }
     
     @IBAction func dislike_button_pushed(_ sender: Any) {
-        if !already_have_a_label {
+        if dislike_pressed > 66 {
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.dislike_button.alpha = 0
+                })
+            }
+            usleep(200000)
+            dislike_button.isHidden = true
+            create_Label_with_promise_string(promise_String: "你没有选择了！")
+            return
+        }
+        dislike_pressed += 1
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.dislike_button.center = CGPoint(x: self.dislike_button.center.x + button_move_offset, y: self.dislike_button.center.y)
+                })
+        }
             random_section = Int(Int(arc4random())%string_lenth)
             if random_section == last_section_is {random_section += 1}
             last_section_is = random_section
             print("This time we spwn a promise in database of section", random_section, ".")
             create_Label_with_promise_string(promise_String: answer_string_format[random_section])
-        }else{
-            already_have_a_label = true
-            
-        }
     }
     @IBAction func like_me_push(_ sender: Any) {
         
@@ -83,6 +126,7 @@ class initViewController: UIViewController {
                 self.dislike_button.alpha = 0
                 self.dislike_button.alpha = 0
                 self.yeslike_button.alpha = 0
+                self.separate_line.alpha = 0
             })
         }
 
@@ -106,7 +150,7 @@ class initViewController: UIViewController {
         }
         DispatchQueue.main.async {
             UIView.animate(withDuration: 1, animations: {
-                self.headicon.center = CGPoint(x: self.BigTilt.center.x - 180, y: self.BigTilt.center.y - 14)
+                self.headicon.frame = CGRect(origin: CGPoint(x: self.BigTilt.center.x - 240, y: self.BigTilt.center.y - 54), size: CGSize(width: 75, height: 75))
                 self.like_image.center = CGPoint(x: self.BigTilt.center.x + 233, y: self.BigTilt.center.y - 14)
             })
         }
