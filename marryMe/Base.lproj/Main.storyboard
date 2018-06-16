@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Init View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="initViewController" customModule="marryMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0799.png" translatesAutoresizingMaskIntoConstraints="NO" id="goP-u7-Q3O">
+                                <rect key="frame" x="665" y="126" width="147" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0316.png" translatesAutoresizingMaskIntoConstraints="NO" id="jEC-qB-FXq">
+                                <rect key="frame" x="46" y="111" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="做我女朋友吧！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-Rm-Gar">
+                                <rect key="frame" x="115" y="127" width="275" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" red="1" green="0.67795634641548363" blue="0.9037206381346663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 小姐姐你好QAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8t-gG-cQx">
+                                <rect key="frame" x="118" y="94" width="261" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.67795634640000002" blue="0.90372063810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-0J-gLa">
+                                <rect key="frame" x="118" y="228" width="86" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="好的！">
+                                    <color key="titleColor" red="0.99983507394790649" green="0.67717665433883667" blue="0.90075176954269409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="like_me_push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghe-Om-tM5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARL-pu-eVJ">
+                                <rect key="frame" x="293" y="228" width="86" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="不好！">
+                                    <color key="titleColor" red="0.99983507390000004" green="0.67717665429999996" blue="0.90075176950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dislike_button_pushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceU-4V-uba"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答应我好嘛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mdS-5J-u7p">
+                                <rect key="frame" x="383" y="126" width="274" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" red="1" green="0.67795634640000002" blue="0.90372063810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-CW-vH1">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0244.png" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-mj-7oQ">
+                                <rect key="frame" x="565" y="94" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="1oX-AL-ALm"/>
+                                    <constraint firstAttribute="height" constant="166" id="Qb8-d8-Klg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95298003672089449" green="0.92347015290593304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TbA-mj-7oQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="6XF-0c-lp9"/>
+                            <constraint firstItem="wIv-CW-vH1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7x2-Bu-uja"/>
+                            <constraint firstAttribute="trailing" secondItem="wIv-CW-vH1" secondAttribute="trailing" id="DZT-eU-d7X"/>
+                            <constraint firstAttribute="bottom" secondItem="wIv-CW-vH1" secondAttribute="bottom" id="FFj-Jd-PbL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TbA-mj-7oQ" secondAttribute="bottom" constant="94" id="PrJ-0L-6ey"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TbA-mj-7oQ" secondAttribute="trailing" constant="37" id="Y5h-BH-k9S"/>
+                            <constraint firstItem="wIv-CW-vH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sFS-JL-frZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="BigTilt" destination="Ijc-Rm-Gar" id="vr3-tk-Mfo"/>
+                        <outlet property="dislike_button" destination="ARL-pu-eVJ" id="gdV-4x-qyg"/>
+                        <outlet property="headicon" destination="jEC-qB-FXq" id="ptT-s6-nLg"/>
+                        <outlet property="like_image" destination="TbA-mj-7oQ" id="uvJ-zS-4uO"/>
+                        <outlet property="promise_label" destination="mdS-5J-u7p" id="TrW-1u-g7F"/>
+                        <outlet property="user_control_Agent" destination="wIv-CW-vH1" id="1iO-Pc-136"/>
+                        <outlet property="welcome_image_main" destination="goP-u7-Q3O" id="8Fd-w7-L5s"/>
+                        <outlet property="welcome_tilt" destination="h8t-gG-cQx" id="aVN-We-x5C"/>
+                        <outlet property="yeslike_button" destination="hTw-0J-gLa" id="uZn-t8-0BL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.48768472906404" y="117.59999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0244.png" width="480" height="480"/>
+        <image name="IMG_0316.png" width="4500" height="4500"/>
+        <image name="IMG_0799.png" width="200" height="200"/>
+    </resources>
+</document>
